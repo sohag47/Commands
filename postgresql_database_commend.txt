@@ -1,0 +1,17 @@
+1.login by the username:
+> psql -U postgres
+  username: postgres
+  password: zxcv147bnm
+  port:5432
+
+2. show all database:
+>\l
+
+3. select database:
+> \c (database_name)
+
+4. show table:
+> \dt
+
+5.Use \q to quit.
+> \q

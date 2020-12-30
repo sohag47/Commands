@@ -1,0 +1,24 @@
+# Git commend:
+1. show git version
+> git --version
+
+2.change foulder:
+> cd Desktop
+
+3. git initialise:
+> git init
+
+4. file create:
+> touch commendGit.txt
+
+5. status
+> git status
+
+6.add file
+> git add first.txt
+
+7. commit 
+> git commit
+
+8. github link project
+> git clone URL

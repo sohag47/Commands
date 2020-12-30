@@ -1,0 +1,15 @@
+# Frontend commend:
+1.ceate react app: 
+> npx create-react-app my-app 
+
+2. install bootstrap in react
+> npm install bootstrap
+
+3. install router:
+> npm i react-router-dom
+ 
+4.install axios for data capture from api:
+> npm install axios
+
+5. run react app:
+> npm run

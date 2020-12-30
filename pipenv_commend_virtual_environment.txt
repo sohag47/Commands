@@ -1,0 +1,21 @@
+1. check(python+pip) installed
+2. check all pip package:
+> pip freeze
+
+3. install pipenv frist time in the system:
+> pip install --user pipenv
+
+4. install pipenv for every project:
+> pipenv install
+
+5. activate virtual environment:
+> pipenv shell
+
+6. install any package in this project:
+> pipenv install <package name>
+
+7. deactivate pipenv environment:
+> exit
+
+8. uninstall pipenv:
+> pip uninstall pipenv

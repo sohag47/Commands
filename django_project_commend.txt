@@ -1,0 +1,45 @@
+1.create folder:
+> mkdir portfolio_sohag
+
+2. goto portfolio_sohag folder
+> cd portfolio_sohag
+
+3.create virtual environment:
+> python -m venv venv
+
+4. activate virtual environment:
+> venv\Scripts\activate (for windows)
+> source venv/bin/activate ( for linux)
+
+5. install Django:
+> pip install Django
+
+6. create a project:
+> django-admin startproject portfolio_project
+
+7. run project server:
+> python manage.py runserver
+
+8. create djano app:
+> python manage.py startapp portfolio
+
+9. django pic
+> pip install Pillow
+
+10. database model initalise
+> python manage.py makemigrations
+
+11. database model final :
+> python manage.py migrate
+
+12.create database user id, password
+> python manage.py createsuperuser
+
+13.Rendering Bootstrap Forms
+> pip install django-widget-tweaks
+
+14. create requirements.txt file:
+> pip freeze > requirements.txt
+
+15. install django rest framework:
+> pip install djangorestframework django-cors-headers
