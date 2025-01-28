@@ -14,7 +14,7 @@ npm run build # default build
 
 npm install -g pm2 # for project management in background
 
-pm2 start npm --name "nextjs-app" -- start # configure your project
+pm2 start npm --name nextjs-app -- start # configure your project
 
 pm2 startup # auto restart system start up
 
@@ -51,18 +51,18 @@ sudo systemctl status nginx
 sudo nano /etc/nginx/sites-available/nextjs-app
 
 # add this script
-# server {
-#   listen 80;
-#   server_name 192.168.0.122; # IP/Domain
-#   location / {
-#     proxy_pass http://192.168.0.122:3000; # pm2 application url
-#     proxy_http_version 1.1;
-#     proxy_set_header Upgrade $http_upgrade;
-#     proxy_set_header Connection 'upgrade';
-#     proxy_set_header Host $host;
-#     proxy_cache_bypass $http_upgrade;
-#   }
-# }
+server {
+  listen 80;
+  server_name 192.168.0.122; # IP/Domain
+  location / {
+    proxy_pass http://192.168.0.122:3000; # pm2 application url
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
 
 # sites-enabled
 sudo ln -s /etc/nginx/sites-available/nextjs-app /etc/nginx/sites-enabled/
