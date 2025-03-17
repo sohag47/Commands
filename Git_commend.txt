@@ -22,3 +22,6 @@
 
 8. github link project
 > git clone URL
+
+9. create branch localy and pull specefic branch
+> git checkout -b branch_name origin/branch_name
