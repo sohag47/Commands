@@ -25,3 +25,6 @@
 
 9. create branch localy and pull specefic branch
 > git checkout -b branch_name origin/branch_name
+
+10. clone specific branch
+> git clone --branch <branchname> url
