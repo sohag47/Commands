@@ -1,5 +1,6 @@
 # Build and Publish Dotnet Application
 
+```bash
 publish/
 ↓
 scp publish → server
@@ -9,6 +10,7 @@ scp publish → server
 systemd service
 ↓
 nginx reverse proxy
+```
 
 ```bash
 # open wsl as root
