@@ -71,3 +71,25 @@ sudo systemctl start cmsapp
 sudo systemctl enable cmsapp
 sudo systemctl status cmsapp
 ```
+
+```bash
+# stop app
+sudo systemctl stop cmsapp
+
+# stop auto start
+sudo systemctl disable cmsapp
+
+# check autostart is enabled
+systemctl is-enabled cmsapp
+
+# auto-start again
+sudo systemctl enable cmsapp
+
+# restart app
+sudo systemctl restart cmsapp
+```
+
+```bash
+# show logs
+journalctl -u cmsapp -f
+```
