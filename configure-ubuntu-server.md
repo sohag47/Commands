@@ -155,10 +155,20 @@ sudo systemctl enable docker
 docker --version
 
 docker compose version
-
 sudo usermod -aG docker $USER
 
 newgrp docker
 
 echo "install docker desktop manually"
+```
+
+
+# Create a folder and set permissions
+```bash
+sudo mkdir -p /opt/frontend
+sudo chown -R sptsolution:sptsolution /opt/frontend
+sudo chmod -R 755 /opt/frontend
+# verify 
+ls -ld /opt/frontend 
+# output: drwxr-xr-x  sptsolution sptsolution /opt/frontend
 ```
