@@ -15,7 +15,7 @@
     "mycli": "./bin/index.js"
   },
   "dependencies": {
-    "@vitalets/google-translate-api": "^7.0.0",
+    "@vitalets/google-translate-api": "^9.2.1",
     "boxen": "^4.2.0",
     "chalk": "^4.1.1",
     "figlet": "^1.5.2",
