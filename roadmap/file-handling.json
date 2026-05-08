@@ -1,0 +1,52 @@
+{
+  "files": {
+    "tech-stack": {
+      "parsing": ["CsvHelper", "ExcelDataReader", "Library.Xml"],
+      "background-processing": ["Hangfire", "System.Threading.Channels"],
+      "database-performance": [
+        "EFCore.BulkExtensions",
+        "Npgsql (for Postgres COPY)"
+      ],
+      "real-time": ["Microsoft.AspNetCore.SignalR"]
+    },
+    "export": {
+      "files": ["PDF", "Excel", "CSV"],
+      "response-type": ["json response api", "file stream"]
+    },
+    "import": {
+      "just-save": {
+        "store": {
+          "file-type": ["PDF", "Image"],
+          "storage": ["In Disk", "CDN"],
+          "uploads": ["upload api", "FormData with Dto"]
+        }
+      },
+      "file-Process": {
+        "file-type": ["Excel", "CSV", "XML"],
+        "accept": ["single", "multiple"],
+        "processing-strategy": {
+          "ingestion": "Stream-to-Disk",
+          "parsing": "Line-by-line (IAsyncEnumerable)",
+          "batch-size": "5,000 - 10,000 rows"
+        },
+        "steps": [
+          "Header Validation",
+          "Data Mapping",
+          {
+            "saving": {
+              "small-files": "current request (EF Core)",
+              "large-files": "background jobs (EFCore.BulkExtensions)"
+            }
+          },
+          {
+            "response": {
+              "immediate": "202 Accepted + JobId",
+              "progress": "SignalR Hub",
+              "final": ["Notification"]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
